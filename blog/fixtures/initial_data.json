@@ -1,0 +1,20 @@
+[
+    {
+        "pk":1,
+        "model":"blog.person",
+        "fields":{
+            "first":"John",
+            "middle":"Q",
+            "last":"Doe"
+        }
+    },
+    {
+        "pk":2,
+        "model":"blog.person",
+        "fields":{
+            "first":"Jane",
+            "middle":"N",
+            "last":"Doe"
+        }
+    }
+]

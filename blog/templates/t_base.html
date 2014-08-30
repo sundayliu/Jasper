@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>{% block title %}Web Site{% endblock %}</title>
+    </head>
+    <body>
+        <div id="header">
+            <a href="/section1/">Section 1</a>
+            <a href="/section2/">Section 2</a>
+        </div>
+        <div id="content">
+            {% block content %}{% endblock %}
+        </div>
+        <div id="footer">
+            <a href="/about/">About The Site</a>
+        </div>
+    </body>
+</html>
