@@ -1,5 +1,5 @@
 '''
-Created on 2014Äê8ÔÂ30ÈÕ
+Created on 2014.8.30
 
 @author: tata
 '''
