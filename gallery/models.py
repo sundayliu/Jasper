@@ -1,3 +1,4 @@
+# -*- coding:utf-8 -*-
 from django.db import models
 from django.db.models import permalink
 from django.contrib import admin
@@ -9,7 +10,7 @@ class Item(models.Model):
     class Meta:
         ordering=['name']
     def __unicode__(self):
-        return self.name
+        return u'%s' % self.name
     @permalink
     def get_absolute_url(self):
         return ('item_detail',None,{'object_id':self.id})
@@ -23,7 +24,7 @@ class Photo(models.Model):
     class Meta:
         ordering = ['title']
     def __unicode__(self):
-        return self.title
+        return u'%s' % self.title
     @permalink
     def get_absolute_url(self):
         return ('photo_detail',None,{'object_id':self.id})

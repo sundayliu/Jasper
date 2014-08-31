@@ -6,7 +6,7 @@ from blog.models import Book
 from blog.models import Author
 # Create your views here.
 
-def archive(request,year,month,day):
+def archive(request,year=None,month=None,day=None):
     posts = BlogPost.objects.all()
     t = loader.get_template('archive.html')
     c = Context({'posts':posts})
