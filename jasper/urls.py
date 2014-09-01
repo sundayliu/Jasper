@@ -11,6 +11,7 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^blog/',include('blog.urls')),
+    url(r'^liveupdate/',include('liveupdate.urls'))
     #url(r'^media/(?P<path>.*)$','django.contrib.staticfiles.views.serve',{'document_root': settings.MEDIA_ROOT}),
 )
 
