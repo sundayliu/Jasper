@@ -42,6 +42,7 @@ INSTALLED_APPS = (
     'blog',
     'gallery',
     'liveupdate',
+    'pastebin',
     
 )
 
