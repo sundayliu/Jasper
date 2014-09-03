@@ -33,7 +33,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = (
     'fourth',
-    #'django.contrib.sites',
+    'django.contrib.sites',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -97,3 +97,5 @@ MEDIA_URL = '/media/'
 #     'django.template.loaders.filesystem.load_template_source',
 #     'django.template.loaders.app_directories.load_template_source',
 # )
+
+SITE_ID = 1
