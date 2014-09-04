@@ -4,5 +4,13 @@
 <h1>{{ object }}</h1>
 <p>Syntax: {{ object.get_syntax_display }}<br>
 Date: {{ object.timestamp|date:"r" }}</p>
-<code><pre>{{ object.content }}</pre></code>
+<code><pre name="code" class="brush: {{ object.get_syntax_display|lower }};">{{ object.content }}</pre></code>
+<link type="text/css" rel="stylesheet" href="/media/styles/syntaxhighlighter/shCoreMidnight.css"/>
+<script type="text/javascript" src="/media/js/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="/media/js/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="/media/js/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="/media/js/syntaxhighlighter/shBrushJscript.js"></script>
+<script type="text/javascript" src="/media/js/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="/media/js/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript">SyntaxHighlighter.all('code')</script>
 {% endblock %}

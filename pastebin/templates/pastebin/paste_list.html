@@ -3,7 +3,7 @@
 {% block content %}
 <h1>Recently Pasted</h1>
 <ul>
-    {% for object in object_list %}
+    {% for object in object_list|slice:":10" %}
     <li><a href="{{ object.get_absolute_url }}">{{ object }}</a>
     {% endfor %}
 </ul>
