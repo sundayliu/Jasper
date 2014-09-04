@@ -42,6 +42,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',    
     'gallery',
     'liveupdate',
+    'cms',
     'pastebin',
     'blog',
     #'django.contrib.flatpages',
@@ -99,3 +100,4 @@ MEDIA_URL = '/media/'
 # )
 
 SITE_ID = 1
+EXPIRY_DAYS = 2

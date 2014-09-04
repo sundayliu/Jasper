@@ -1,3 +1,4 @@
 eclipse.preferences.version=1
 encoding//blog/feeds.py=utf-8
 encoding//gallery/models.py=utf-8
+encoding//pastebin/cronjob.py=utf-8
