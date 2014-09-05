@@ -28,6 +28,13 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# debug log
+import logging
+logging.basicConfig(
+                    level=logging.DEBUG,
+                    format='%(asctime)s %(levelname)s %(message)s',)
+
+
 
 # Application definition
 
@@ -101,3 +108,4 @@ MEDIA_URL = '/media/'
 
 SITE_ID = 1
 EXPIRY_DAYS = 2
+TEMPLATE_DIRS = ('e:/website/jasper/cms/templates/cms/',)

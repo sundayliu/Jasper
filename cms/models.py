@@ -10,6 +10,7 @@ class ViewableManager(models.Manager):
     def get_query_set(self):
         default_queryset = super(ViewableManager,self).get_query_set()
         return default_queryset.filter(status__in=VIEWABLE_STATUS)
+
 class Category(models.Model):
     """ A content category """
     label = models.CharField(blank=True,max_length=50)
@@ -18,6 +19,7 @@ class Category(models.Model):
         verbose_name_plural = "categories"
     def __unicode__(self):
         return self.label
+
 class Story(models.Model):
     """A hunk of content for our site,generally corresponding to a page"""
     STATUS_CHOICES = (
@@ -30,20 +32,22 @@ class Story(models.Model):
     category = models.ForeignKey(Category)
     markdown_content = models.TextField()
     html_content = models.TextField(editable=False)
-    owener = models.ForeignKey(User)
+    owner = models.ForeignKey(User)
     status = models.IntegerField(choices=STATUS_CHOICES,default=1)
     created = models.DateTimeField(default=datetime.datetime.now)
     modified = models.DateTimeField(default=datetime.datetime.now)
     class Meta:
         ordering = ['modified']
         verbose_name_plural = "stories"
+    
     def save(self):
         self.html_content = markdown(self.markdown_content)
         self.modified = datetime.datetime.now()
         super(Story,self).save()
+    
     @permalink
     def get_absolute_url(self):
         return ("cms-story",(),{'slug':self.slug})
+    
     admin_objects = models.Manager()
     objects = ViewableManager()
-        
